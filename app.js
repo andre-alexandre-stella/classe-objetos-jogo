@@ -24,7 +24,7 @@ class Heroi{
     }
 
     atacar(){
-        let mensagem = `O ${this.tipoHeroi} atacou usando ${this.tipoAtaque}.`;
+        let mensagem = `O ${this.tipoHeroi} ${this.nomeHeroi}, com seus ${this.idadeHeroi} anos, atacou usando ${this.tipoAtaque}.`;
         console.log(mensagem);
     }
 }
