@@ -24,7 +24,28 @@ class Heroi{
     }
 
     atacar(){
-        let mensagem = `O ${this.tipoHeroi} ${this.nomeHeroi}, com seus ${this.idadeHeroi} anos, atacou usando ${this.tipoAtaque}.`;
+        let tiposDeHeroi = ['mago', 'guerreiro', 'monge', 'ninja'];
+        let mensagem = '';
+        if(tiposDeHeroi.includes(this.tipoHeroi)){
+            mensagem = `O ${this.tipoHeroi} ${this.nomeHeroi}, com seus ${this.idadeHeroi} anos, atacou usando ${this.tipoAtaque}.`;
+        } else{
+            mensagem = this.tipoAtaque;
+        }        
         console.log(mensagem);
     }
 }
+
+let mago = new Heroi('Merlin', 200, 'mago');
+mago.atacar();
+
+let guerreiro = new Heroi('He-man', 35, 'guerreiro');
+guerreiro.atacar();
+
+let monge = new Heroi('Dalai Lama', 90, 'monge');
+monge.atacar();
+
+let ninja = new Heroi('Bruce Lee', 25, 'ninja');
+ninja.atacar();
+
+let soldado = new Heroi('Rambo', 30, 'soldado');
+soldado.atacar();
